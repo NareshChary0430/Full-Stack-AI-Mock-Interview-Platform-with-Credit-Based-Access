@@ -3,7 +3,21 @@ import {BsRobot} from 'react-icons/bs'
 import {IoSparkles} from 'react-icons/io5'
 import {motion} from 'motion/react'
 import {FcGoogle} from 'react-icons/fc'
+
+import { auth, provider } from '../utils/firebase';
+import { signInWithPopup } from "firebase/auth";
 const Auth = () => {
+
+
+  const handleGoogleAuth = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log(result);
+    } catch (error) {
+      console.error("Error signing in with Google:", error);
+    }
+  };
+
   return (
     <div className='w-full min-h-screen bg-[#f3f3f3] flex items-center justify-center px-6 py-20'>
       <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{duration:1.05}} className = "w-full max-w-md p-8 rounded-3xl bg-white shadow-2xl border border-gray-200">
@@ -25,7 +39,7 @@ const Auth = () => {
           Sign in to start AI-powered mock interviews, track your progress, and boost your confidence for real interviews!
         </p>
 
-<motion.button whileHover={{ opacity:0.9,scale: 1.05 }} whileTap={{opacity:1 ,scale: 0.98 }} className='w-full flex items-center justify-center gap-3 py-3 bg-black text-white  rounded-full shadow-md'>
+<motion.button onClick={handleGoogleAuth} whileHover={{ opacity:0.9,scale: 1.05 }} whileTap={{opacity:1 ,scale: 0.98 }} className='w-full flex items-center justify-center gap-3 py-3 bg-black text-white  rounded-full shadow-md'>
           <FcGoogle size={20} />
           Continue with Google
 
