@@ -3,16 +3,22 @@ import {BsRobot} from 'react-icons/bs'
 import {IoSparkles} from 'react-icons/io5'
 import {motion} from 'motion/react'
 import {FcGoogle} from 'react-icons/fc'
+import axios from 'axios'
 
 import { auth, provider } from '../utils/firebase';
 import { signInWithPopup } from "firebase/auth";
+import { ServerURL } from '../App'
 const Auth = () => {
 
 
   const handleGoogleAuth = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
-      console.log(result);
+      let User = result.user;
+      let name = User.displayName;
+      let email = User.email;
+      const response = await axios.post(ServerURL + "/api/auth/google", { name, email }, { withCredentials: true });
+      console.log(response.data);
     } catch (error) {
       console.error("Error signing in with Google:", error);
     }
