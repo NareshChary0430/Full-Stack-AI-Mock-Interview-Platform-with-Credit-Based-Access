@@ -24,6 +24,8 @@ const App = () => {
       } catch (error) {
         console.log(error)
         dispatch(setUserData(null))
+
+        
       }
     }
     getUser()
