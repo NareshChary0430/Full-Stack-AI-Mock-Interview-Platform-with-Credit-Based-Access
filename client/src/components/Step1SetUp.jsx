@@ -20,6 +20,7 @@ function Step1SetUp({ onStart }) {
     const [mode, setMode] = useState("Technical");
     const [resumeFile, setResumeFile] = useState(null);
     const [loading, setLoading] = useState(false);
+    
     const [projects, setProjects] = useState([]);
     const [skills, setSkills] = useState([]);
     const [resumeText, setResumeText] = useState("");
