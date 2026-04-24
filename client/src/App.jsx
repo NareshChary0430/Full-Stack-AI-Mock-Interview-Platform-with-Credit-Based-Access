@@ -3,6 +3,7 @@ import React from 'react'
 import { Routes,Route } from 'react-router-dom' 
 import Home from './pages/Home'
 import Auth from './pages/auth.jsx'
+import Interview from './pages/InterviewPage.jsx'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setUserData } from './redux/userSlice'
@@ -38,6 +39,7 @@ const App = () => {
 
 <Route path="/" element={<Home />} />
 <Route path="/auth" element={<Auth />} />
+<Route path="/interview" element={<Interview />} />
    </Routes>
   )
 }
