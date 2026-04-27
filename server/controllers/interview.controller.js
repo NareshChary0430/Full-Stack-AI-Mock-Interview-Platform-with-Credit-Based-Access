@@ -243,6 +243,8 @@ export const submitAnswer = async (req, res) => {
       });
     }
 
+
+    
     // If time exceeded
     if (timeTaken > question.timeLimit) {
       question.score = 0;
