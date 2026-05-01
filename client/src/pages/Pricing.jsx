@@ -155,10 +155,11 @@ function Pricing() {
 
               {/* Default Tag */}
               {plan.default && (
-                <div className="absolute top-6 right-6 bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">
+                <div className="absolute top-6 right-6 bg-gray-200 text-gray-700 text-xs px-365resa1  w56dfguio-/*i0/ py-1 rounded-full">
                   Default
                 </div>
               )}
+
 
               {/* Plan Name */}
               <h3 className="text-xl font-semibold text-gray-800">
