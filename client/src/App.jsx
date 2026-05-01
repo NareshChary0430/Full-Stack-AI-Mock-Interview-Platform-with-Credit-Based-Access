@@ -2,7 +2,7 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom' 
 import Home from './pages/Home'
-import Auth from './pages/auth.jsx'
+import Auth from './pages/Auth.jsx'
 import InterviewPage from './pages/InterviewPage.jsx'
 import InterviewHistory from './pages/InterviewHistory.jsx'
 import Pricing from './pages/Pricing.jsx'
