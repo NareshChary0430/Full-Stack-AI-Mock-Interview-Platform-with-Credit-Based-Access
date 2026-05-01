@@ -3,7 +3,10 @@ import React from 'react'
 import { Routes,Route } from 'react-router-dom' 
 import Home from './pages/Home'
 import Auth from './pages/auth.jsx'
-import Interview from './pages/InterviewPage.jsx'
+import InterviewPage from './pages/InterviewPage.jsx'
+import InterviewHistory from './pages/InterviewHistory.jsx'
+import Pricing from './pages/Pricing.jsx'
+import InterviewReport from './pages/InterviewReport.jsx'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setUserData } from './redux/userSlice'
@@ -35,12 +38,17 @@ const App = () => {
 
 
   return (
-   <Routes> 
+  <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/auth' element={<Auth/>}/>
+      <Route path='/interview' element={<InterviewPage/>}/>
+      <Route path='/history' element={<InterviewHistory/>}/>
+      <Route path='/pricing' element={<Pricing/>}/>
+      <Route path='/report/:id' element={<InterviewReport/>}/>
 
-<Route path="/" element={<Home />} />
-<Route path="/auth" element={<Auth />} />
-<Route path="/interview" element={<Interview />} />
-   </Routes>
+
+
+    </Routes>
   )
 }
 
