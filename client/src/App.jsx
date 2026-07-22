@@ -14,7 +14,7 @@ import axios from 'axios'
 
 
 
-export const ServerUrl = "https://full-stack-ai-mock-interview-platform.onrender.com"
+export const ServerUrl = "http://localhost:8000"
 
 const App = () => {
 
