@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { motion } from "framer-motion";
 import { ServerUrl } from '../App';
 import { useDispatch } from 'react-redux';
 import { setUserData } from '../redux/userSlice';
